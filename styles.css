@@ -23108,7 +23108,7 @@ ul.smothscroll a:hover {
 .wpo-video-section {
     position: relative;
     z-index: 99;
-    background: url('images/cta.jpg') no-repeat 50%;
+    background: url('images/cta.webp') no-repeat 50%;
     /* weight: 500px; */
     height: 400px;
     background-attachment: fixed;
