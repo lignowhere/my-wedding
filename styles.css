@@ -23474,7 +23474,7 @@ ul.smothscroll a:hover {
     position: relative;
     margin-bottom: 40px;
     box-shadow: 0 0 6.1px 3.9px rgba(28, 31, 86, 0.06);
-    background: #fff;
+    background: url(images/bg.png);
     padding: 30px;
 }
 
