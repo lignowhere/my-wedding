@@ -31312,3 +31312,13 @@ h2 {
         max-width: 450px;
     }
   }
+
+.txt-lb{
+
+}
+
+@media screen and (max-width: 500px) {
+    .txt-lb{
+        font-size: 14px;
+    }
+}

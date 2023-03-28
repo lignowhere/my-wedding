@@ -668,7 +668,7 @@
         const element = response[index];
         text_html += `<div class="message-contact-per">
                 <h4>${element?.fullname}</h4>
-                <p>${element?.message}</p>
+                <p class="txt-lb" >${element?.message?.replaceAll('\n\n', '<br />')}</p>
               </div>`
       }
       congratuation_container.innerHTML = text_html
