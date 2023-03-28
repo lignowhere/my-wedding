@@ -457,9 +457,7 @@
                   <li>16:00 - Thứ Bảy, ngày 08/04 Dương lịch</li>
                   <li>Xóm Ba, Mão Điền, Thuận Thành, Bắc Ninh</li>
                 </ul>
-                <a class="see-location-btn"
-                  href="https://goo.gl/maps/5D4AMaZZZLZMJWxc6"
-                  target="_blank">Xem bản đồ</a>
+                <a class="see-location-btn" href="https://goo.gl/maps/5D4AMaZZZLZMJWxc6" target="_blank">Xem bản đồ</a>
               </div>
             </div>
           </div>
@@ -473,9 +471,7 @@
                   <li>15:00 - Chủ Nhật, ngày 09/04 Dương lịch</li>
                   <li>Xóm Lũy, Mão Điền, Thuận Thành, Bắc Ninh</li>
                 </ul>
-                <a class="see-location-btn"
-                  href="https://goo.gl/maps/iyGa7v8vfWoyc1nY6"
-                  target="_blank">Xem bản đồ</a>
+                <a class="see-location-btn" href="https://goo.gl/maps/iyGa7v8vfWoyc1nY6" target="_blank">Xem bản đồ</a>
               </div>
             </div>
           </div>
@@ -489,9 +485,7 @@
                   <li>12:00 - Chủ Nhật, ngày 09/04 Dương lịch</li>
                   <li>Xóm Ba, Mão Điền, Thuận Thành, Bắc Ninh</li>
                 </ul>
-                <a class="see-location-btn"
-                  href="https://goo.gl/maps/5D4AMaZZZLZMJWxc6"
-                  target="_blank">Xem bản đồ</a>
+                <a class="see-location-btn" href="https://goo.gl/maps/5D4AMaZZZLZMJWxc6" target="_blank">Xem bản đồ</a>
               </div>
             </div>
           </div>
@@ -639,7 +633,6 @@
           seconds: Math.floor((difference / 1000) % 60),
         };
       }
-      console.log('times', times)
       const day_element = document.getElementById('day-time')
       const hours_element = document.getElementById('hours-time')
       const minute_element = document.getElementById('minute-time')
@@ -662,10 +655,11 @@
       let response = await fetch("https://641d20a7b556e431a87c82ce.mockapi.io/api/v1/congratuation")
         .then((response) => response.json())
         .then((data) => { return data });
-      console.log('response', response)
+      const key = 'fullname'
+      const unique = [...new Map(response.map(item => [item[key], item])).values()]
       let text_html = ``
-      for (let index = response.length - 1; index >= 0; index--) {
-        const element = response[index];
+      for (let index = unique.length - 1; index >= 0; index--) {
+        const element = unique[index];
         text_html += `<div class="message-contact-per">
                 <h4>${element?.fullname}</h4>
                 <p class="txt-lb" >${element?.message?.replaceAll('\n\n', '<br />')}</p>
