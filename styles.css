@@ -31307,3 +31307,8 @@ h2 {
     background-size: 20px;
     cursor: pointer;
 }
+@media screen and (max-width: 500px) {
+    video#video-story {
+        max-width: 450px;
+    }
+  }
